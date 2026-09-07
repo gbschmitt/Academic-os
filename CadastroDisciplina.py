@@ -3,13 +3,13 @@ import json
 import os
 
 def main(page: ft.Page):
-    # Configurações básicas da página
+
     page.title = "AcademicOS"
     page.vertical_alignment = "center"
     page.horizontal_alignment = "center"
     page.padding = 0 
     
-    # Paleta de Cores
+
     azul_uerj = "#0055A4"
     vermelho_uerj = "#E52321"
     dourado_uerj = "#C19A3F"
@@ -17,9 +17,9 @@ def main(page: ft.Page):
     page.theme_mode = "light" 
     page.bgcolor = "#E3F2FD" 
 
-    # ==========================================
+
     # FUNÇÕES DE NAVEGAÇÃO (TROCA DE VISIBILIDADE)
-    # ==========================================
+
     def ir_para_cadastro(e):
         tela_intro.visible = False
         tela_cadastro.visible = True
@@ -30,9 +30,8 @@ def main(page: ft.Page):
         tela_intro.visible = True
         page.update()
 
-    # ==========================================
     # 1. TELA INICIAL (INTRODUÇÃO)
-    # ==========================================
+
     titulo_intro = ft.Text("AcademicOS", size=36, weight="bold", color=azul_uerj)
     logo_intro = ft.Image(src="image_ef4634.png", width=140, height=140, fit="contain")
     
@@ -68,9 +67,9 @@ def main(page: ft.Page):
         visible=True # Esta tela começa visível
     )
 
-    # ==========================================
+
     # 2. TELA DE CADASTRO (CÓDIGO ESTÁVEL)
-    # ==========================================
+
     botao_voltar = ft.TextButton("< Voltar para o Início", on_click=ir_para_inicio, icon_color=azul_uerj)
     logo_cadastro = ft.Image(src="image_ef4634.png", width=110, height=110, fit="contain")
     titulo_cadastro = ft.Text("Cadastrar Nova Disciplina", size=24, weight="bold", color=azul_uerj)
