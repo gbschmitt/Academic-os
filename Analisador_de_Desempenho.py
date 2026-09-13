@@ -5,9 +5,9 @@ import asyncio
 
 async def main(page: ft.Page): 
     
-    # ==========================================
+    
     # CONFIGURAÇÕES GERAIS E CORES DA UERJ
-    # ==========================================
+    
     page.title = "AcademicOS"
     page.vertical_alignment = "center"
     page.horizontal_alignment = "center"
@@ -21,9 +21,9 @@ async def main(page: ft.Page):
     page.bgcolor = "#E3F2FD" 
     arquivo_json = "dados_academicos.json"
 
-    # ==========================================
+    
     # FUNÇÕES DE NAVEGAÇÃO SPA
-    # ==========================================
+    
     def ir_para_cadastro(e):
         tela_intro.visible = False
         tela_lancamento.visible = False
@@ -60,9 +60,9 @@ async def main(page: ft.Page):
         tela_intro.visible = True
         page.update()
 
-    # ==========================================
-    # 0. TELA DE SPLASH (ABERTURA COM STACK)
-    # ==========================================
+    
+    # 0. TELA DE SPLASH 
+    
     tela_splash = ft.Stack(
         controls=[
             ft.Image(
@@ -98,9 +98,9 @@ async def main(page: ft.Page):
         visible=True 
     )
 
-    # ==========================================
+    
     # 1. TELA INICIAL 
-    # ==========================================
+    
     titulo_intro = ft.Text("AcademicOS", size=36, weight="bold", color=azul_uerj)
     logo_intro = ft.Image(src="image_ef4634.png", width=140, height=140, fit="contain")
         
@@ -160,9 +160,9 @@ async def main(page: ft.Page):
         visible=False 
     )
 
-    # ==========================================
+    
     # 2. TELA DE CADASTRO 
-    # ==========================================
+    
     botao_voltar_cad = ft.TextButton("< Voltar", on_click=ir_para_inicio, icon_color=azul_uerj)
     nome_input = ft.TextField(label="Nome da Disciplina", width=350, border_color=azul_uerj, focused_border_color=dourado_uerj)
     carga_horaria_input = ft.TextField(label="Carga Horária (ex: 60)", keyboard_type="number", width=350, border_color=azul_uerj, focused_border_color=dourado_uerj)
@@ -196,9 +196,9 @@ async def main(page: ft.Page):
         bgcolor=ft.Colors.WHITE, padding=40, border_radius=20, visible=False
     )
 
-    # ==========================================
+    
     # 3. TELA DE LANÇAMENTOS 
-    # ==========================================
+    
     botao_voltar_lanc = ft.TextButton("< Voltar", on_click=ir_para_inicio, icon_color=azul_uerj)
     disciplina_dropdown = ft.Dropdown(label="Selecione a Disciplina", width=350, border_color=azul_uerj, focused_border_color=dourado_uerj)
     
@@ -312,9 +312,9 @@ async def main(page: ft.Page):
         bgcolor=ft.Colors.WHITE, padding=40, border_radius=20, visible=False
     )
 
-    # ==========================================
+    
     # 4. TELA DE DESEMPENHO (DASHBOARD)
-    # ==========================================
+    
     botao_voltar_desemp = ft.TextButton("< Voltar", on_click=ir_para_inicio, icon_color=azul_uerj)
 
     dropdown_desemp = ft.Dropdown(
@@ -419,7 +419,7 @@ async def main(page: ft.Page):
             page.overlay.append(ft.SnackBar(content=ft.Text(f"Erro interno: {erro}"), bgcolor=vermelho_uerj, open=True))
             page.update()
 
-    # O TRUQUE DE UX: Botão Explícito para acionar a matemática
+    
     botao_analisar = ft.ElevatedButton(
         "Gerar Análise", 
         on_click=atualizar_painel, 
@@ -451,10 +451,10 @@ async def main(page: ft.Page):
         bgcolor=ft.Colors.WHITE, padding=40, border_radius=20, visible=False
     )
 
-    # ==========================================
-    # MONTAGEM FINAL DA PÁGINA
-    # ==========================================
     
+    
+    
+    # MONTAGEM FINAL DA PÁGINA
     page.add(tela_splash, tela_intro, tela_cadastro, tela_lancamento, tela_desempenho)
     
     await asyncio.sleep(2.5) 
