@@ -38,7 +38,7 @@ pip install flet
 
 ```
 
-## 🚀 Como usar
+## Como usar
 
 Para iniciar o aplicativo, execute o seguinte comando no terminal, dentro da pasta do projeto:
 
@@ -53,7 +53,7 @@ python main.py
 * Acesse **Lançar Notas e Faltas** no dia a dia para atualizar seus registros logo após as aulas ou provas.
 * Utilize o **Painel de Desempenho** para visualizar um *card* inteligente que calcula sua Média Semestral na hora e alerta visualmente (verde, amarelo ou vermelho) sobre a sua situação, inclusive projetando a nota exata que você precisa tirar caso vá para a Prova Final.
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT - veja o arquivo LICENSE.md para detalhes.
 
