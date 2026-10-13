@@ -53,6 +53,9 @@ python main.py
 * Acesse **Lançar Notas e Faltas** no dia a dia para atualizar seus registros logo após as aulas ou provas.
 * Utilize o **Painel de Desempenho** para visualizar um *card* inteligente que calcula sua Média Semestral na hora e alerta visualmente (verde, amarelo ou vermelho) sobre a sua situação, inclusive projetando a nota exata que você precisa tirar caso vá para a Prova Final.
 
+**Página HTML, para testes:**
+* https://gbschmitt.github.io/Academic-os-html/ 
+
 ## Licença
 
 Este projeto está sob a licença MIT - veja o arquivo LICENSE.md para detalhes.
