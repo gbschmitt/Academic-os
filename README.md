@@ -54,7 +54,7 @@ python main.py
 * Utilize o **Painel de Desempenho** para visualizar um *card* inteligente que calcula sua Média Semestral na hora e alerta visualmente (verde, amarelo ou vermelho) sobre a sua situação, inclusive projetando a nota exata que você precisa tirar caso vá para a Prova Final.
 
 **Página HTML, para testes:**
-* https://gbschmitt.github.io/Academic-os-html/ 
+* https://gbschmitt.github.io/Academic-os/
 
 ## Licença
 
